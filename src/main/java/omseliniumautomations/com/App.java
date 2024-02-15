@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  * Hello world!
@@ -14,7 +15,15 @@ public class App {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Hello World!");
 
-        WebDriver driver = new ChromeDriver();
+        // Specify the path to the chromedriver executable
+        String chromeDriverPath = "C:\\Softwares\\chromedriver-win64\\chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+
+        // Create a ChromeOptions object and add the headless mode arguments
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+
+        WebDriver driver = new ChromeDriver(options);
 
         driver.get("https://www.facebook.com/");
 
