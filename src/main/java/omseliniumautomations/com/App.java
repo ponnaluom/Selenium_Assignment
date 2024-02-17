@@ -33,7 +33,7 @@ public class App {
 
         Thread.sleep(10000);
 
-        String excpected_title = "(20+) Facebook";
+        String excpected_title = "Facebook";
 
         System.out.println(excpected_title);
 
