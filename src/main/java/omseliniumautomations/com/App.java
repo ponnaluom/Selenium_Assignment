@@ -15,8 +15,9 @@ public class App {
         System.out.println("Hello World!");
 
         // Specify the path to the chromedriver executable
-        String chromeDriverPath = "C:\\Softwares\\chromedriver-win64\\chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+        // String chromeDriverPath =
+        // "C:\\Softwares\\chromedriver-win64\\chromedriver.exe";
+        // System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 
         // Create a ChromeOptions object and add the headless mode arguments
         ChromeOptions options = new ChromeOptions();
