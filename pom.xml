@@ -52,7 +52,7 @@
 	      <configuration>
 	        <archive>
 	          <manifest>
-	            <mainClass>com.omseliniumautomations.App</mainClass>
+	            <mainClass>omseliniumautomations.com.App</mainClass>
 	          </manifest>
 	        </archive>
 	        <descriptorRefs>
