@@ -22,7 +22,7 @@ public class App {
 
         // Create a ChromeOptions object and add the headless mode arguments
         ChromeOptions options = new ChromeOptions();
-        // options.addArguments("--headless");
+        options.addArguments("--headless");
 
         WebDriver driver = new ChromeDriver(options);
 
