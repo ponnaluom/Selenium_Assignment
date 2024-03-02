@@ -26,7 +26,7 @@ public class App {
 
         WebDriver driver = new ChromeDriver(options);
 
-        driver.get("http://localhost:8081/contact.html");
+        driver.get("http://18.118.147.186:8085/contact.html");
 
         driver.findElement(By.id("inputName")).sendKeys("Om Prakash");
         driver.findElement(By.id("inputNumber")).sendKeys("12345678910");
