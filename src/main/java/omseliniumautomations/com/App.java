@@ -3,6 +3,7 @@ package omseliniumautomations.com;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -21,23 +22,28 @@ public class App {
 
         // Create a ChromeOptions object and add the headless mode arguments
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        // options.addArguments("--headless");
 
         WebDriver driver = new ChromeDriver(options);
 
-        driver.get("https://www.facebook.com/");
+        driver.get("http://localhost:8081/contact.html");
 
-        driver.findElement(By.id("email")).sendKeys("ponnaluom@gmail.com");
-        driver.findElement(By.id("pass")).sendKeys("Om@12345");
-        driver.findElement(By.xpath("//button")).click();
+        driver.findElement(By.id("inputName")).sendKeys("Om Prakash");
+        driver.findElement(By.id("inputNumber")).sendKeys("12345678910");
+        driver.findElement(By.id("inputMail")).sendKeys("ponnaluom@gmail.com");
+        driver.findElement(By.id("inputMessage")).sendKeys("I got it");
+        driver.findElement(By.id("my-button")).click();
+        // driver.findElement(By.xpath("//button")).click();
 
         Thread.sleep(10000);
 
-        String excpected_title = "Facebook";
+        String excpected_title = "Message Sent";
 
         System.out.println(excpected_title);
 
-        String actual_title = driver.getTitle();
+        // driver.findElement(By.id("response"))
+
+        String actual_title = driver.findElement(By.id("response")).getText();
 
         System.out.println(actual_title);
 
